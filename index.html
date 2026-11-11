@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MyTube</title><link rel="stylesheet" href="style.css"><script defer src="https://accounts.google.com/gsi/client"></script><script defer src="app.js"></script></head>
+<body><header><div class="bar"><a class="brand" href="./"><span aria-hidden="true">?</span> MyTube</a><button id="account">Connect YouTube</button></div></header>
+<main><nav aria-label="Feed"><button data-tab="subs" aria-pressed="true">Subscriptions</button><button data-tab="shorts" aria-pressed="false">Shorts</button><button data-tab="later" aria-pressed="false">Watch Later <span id="count"></span></button></nav>
+<div class="heading"><div><h1 id="heading">Subscriptions</h1><p id="subtitle">Latest uploads from your channels</p></div><button id="refresh" hidden>Refresh feed</button><button id="restore" hidden>Show watched</button></div>
+<p id="status" role="status"></p><section id="feed" aria-label="Videos"></section></main>
+<dialog id="connect"><form id="setup"><h2>Connect your YouTube account</h2><p>Enable the YouTube Data API v3 in Google Cloud, create a Web application OAuth client, and add this address to its authorized JavaScript origins.</p><p><code id="origin"></code></p><label for="client">Google OAuth client ID</label><input required id="client" autocomplete="off" placeholder=".apps.googleusercontent.com"><div class="actions"><button type="button" id="cancel">Cancel</button><button class="primary">Continue with Google</button></div></form></dialog>
+<dialog id="player"><div class="actions"><button id="close">Close player</button></div><div id="frame"></div></dialog></body></html>
